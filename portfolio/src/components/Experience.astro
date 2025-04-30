@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import sharingan from "../assets/sharicon.png";
+import mangekyou from "../assets/magekyouicon.png";
+import itachicon from "../assets/itachi.png";
+
+---
+
+<Layout >
+    <section class="lg:flex justify-center w-full container -scroll-m-20">
+        <h1 id="experience" class="mb-5 text-3xl subtitle">Experience</h1>
+        <ol class="lg:m-20 border-s-2 border-gray-700">                  
+            <li class="mb-10 ms-5 lg:ms-15">            
+                <img class="relative flex items-center justify-center w-8 h-8 rounded-full -start-9 lg:-start-19" src={sharingan.src} alt="sharingan-icon"/>
+                <h3 class="flex items-center mb-1 text-lg text-sky-300">QA Engineer - Productive Edge </h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Current</time>
+                <p class="w-80 mb-4 font-normal text-gray-300 md:w-180 lg:w-200">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+            </li>
+            <li class="mb-10 ms-5 lg:ms-15">
+                <img class="relative flex items-center justify-center w-8 h-8 rounded-full -start-9 lg:-start-19" src={mangekyou.src} alt="sharingan-icon"/>
+                <h3 class="mb-1 text-lg text-sky-300">Test Automation Engineer - Globant</h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Mar 2022 - May 2022</time>
+                <p class="w-80 mb-4 font-normal text-gray-300 lg:w-200">Wrote multiple scripts for web and mobile apps like ESPN and Disney-world app with Java, Maven, Android Studio and Appium. 
+
+                    Also worked with JMeter for performance testing and Postman for API’s.</p>
+            </li>
+            <li class="ms-5 lg:ms-15">
+                <img class="relative flex items-center justify-center w-8 h-8 rounded-full -start-9 lg:-start-19" src={itachicon.src} alt="sharingan-icon"/>
+                <h3 class="mb-1 text-lg text-sky-300">Web UI Developer - Globant</h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Jan 2022 - Mar 2022</time>
+                <p class="w-80 mb-4 font-normal text-gray-300 lg:w-200">Create management tools, implementing React for projects including API’s and improving coding skills and
+                    clean code.</p>
+            </li>
+        </ol>
+    </section>
+</Layout>
