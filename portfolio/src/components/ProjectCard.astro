@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { projects } from "../assets/projects/projectInfo";
+
+const colors = ["bg-orange-500", "bg-blue-500", "bg-yellow-500", "bg-sky-500"];
+---
+
+<Layout>
+  <div
+    class="grid grid-cols-1 gap-3 justify-items-center md:grid-cols-2 lg:grid-cols-2 w-full"
+  >
+    {
+      projects.map((projects) => (
+        <article class="w-90 h-130 lg:w-107 projectCard font-[Quicksand]">
+          <img
+            src={projects.image}
+            alt="screenshot"
+            class="rounded-t-lg projectImage"
+          />
+          <section class="relative p-5 flex flex-col justify-center justify-evenly">
+            <h2 class="text-sky-300 font-semibold text-xl mb-4">{projects.title}</h2>
+            <span class="flex gap-2">
+              {projects.tools.map((tool, index) => (
+                <span class={`badge ${colors[index % colors.length]}`}>
+                  {tool}
+                </span>
+              ))}
+            </span>
+            <p class="font-normal text-gray-300 mt-5">{projects.description}</p>
+            <a class="projectLink mt-8" href={projects.link}>
+              {" "}
+              Check the project
+            </a>
+          </section>
+        </article>
+      ))
+    }
+  </div>
+</Layout>
