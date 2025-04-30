@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import sharicon from "../assets/sharicon.png";
+import Contact from "./Contact.astro";
+---
+
+<Layout>
+  <section id="home" class="my-30 md:py-36 scroll-m-20 w-full container mx-auto">
+    <div class="flex flex-row items-end justify-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl title text-center">
+        Hi there, <br /> I'm Luis Hurtad
+      </h1>
+      <img class="sharinganIcon" src={sharicon.src} alt="sharingan-icon" />
+    </div>
+    <br />
+    <h2
+      class="text-xl bg-gradient-to-r from-purple-600 via-purple-400 to-fuchsia-500 bg-clip-text text-transparent text-center"
+    >
+      Front-End developer & QA Engineer
+    </h2>
+    <br />
+    <Contact/>
+  </section>
+</Layout>
