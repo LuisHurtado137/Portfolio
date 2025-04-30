@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <nav
+    class="fixed scroll-m-20 w-full mx-auto top-0 z-10 border-gray-200 bg-neutral-900/90 backdrop-blur-md"
+  >
+    <button id="toggle" class="p-5 md:hidden lg:hidden">
+      <svg
+        class="w-5 h-5 bg-gray"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="white"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="white"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+    <ul
+      class="hidden grid text-center md:flex justify-evenly lg:flex flex justify-evenly py-2"
+      id="menu"
+    >
+      <a href="/#home" class="navLink">Home</a>
+      <a href="/#experience" class="navLink">Experience</a>
+      <a href="/#projects" class="navLink">Projects</a>
+      <a href="/#about" class="navLink">About me</a>
+    </ul>
+  </nav>
+
+  <script>
+    let menuList = document.getElementById("menu");
+    let toggle = document.getElementById("toggle");
+
+    toggle?.addEventListener("click", () => {
+      if (menuList?.classList.contains("hidden")) {
+        menuList.classList.remove("hidden");
+      } else {
+        menuList?.classList.add("hidden");
+      }
+    });
+  </script>
+</Layout>
